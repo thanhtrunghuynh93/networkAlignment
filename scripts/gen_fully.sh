@@ -4,7 +4,7 @@
 python -m generate_dataset.fully_synthetic \
 --output_path data/fully-synthetic \
 --n 10000 \
---p 0.5
+--aver 5
 
 # Step2: run semi-synthetic to create target noise graph
 python -m generate_dataset.semi_synthetic \
