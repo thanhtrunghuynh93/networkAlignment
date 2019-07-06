@@ -45,8 +45,8 @@ class FullySynthetic():
         return graph, features
 
     @staticmethod
-    def generate_erdos_renyi_graph(output_dir, n_nodes, p_edge_creation, seed=123, feature_dim=None):
-        graph = nx.erdos_renyi_graph(n_nodes, p_edge_creation, seed=seed)
+    def generate_erdos_renyi_graph(output_dir, n_nodes, n_edges, seed=123, feature_dim=None):
+        graph = nx.gnm_random_graph(n_nodes, n_edges, seed=seed)
         features = None
         if feature_dim is not None:
             assert type(feature_dim) == int, "feature_dim must be None or int type"
