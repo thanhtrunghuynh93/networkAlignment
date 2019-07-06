@@ -12,6 +12,14 @@ networkx 1.11
 
 python 3
 
+#### example scripts to generate dataset
+
+`scripts/gen_semi_ppi.sh`
+
+`scripts/gen_fully.sh`
+
+#### examples to run algorithms can be found in `script/`
+
 #### data_utils:
 - count_node_same_features: Count number of edges which have same features.
 - edgelist_to_graphsage: Convert from edgelist to graphsage data (include G.json, id_map.json).
