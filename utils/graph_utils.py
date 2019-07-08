@@ -52,7 +52,7 @@ def get_edges(G, id2idx):
     edges = np.array(edges)
     return edges
 
-def load_gt(path, id2idx_src, id2idx_trg, format='matrix'):    
+def load_gt(path, id2idx_src, id2idx_trg, format='matrix', convert=False):    
     conversion_src = type(list(id2idx_src.keys())[0])
     conversion_trg = type(list(id2idx_trg.keys())[0])
     if format == 'matrix':
@@ -67,6 +67,9 @@ def load_gt(path, id2idx_src, id2idx_trg, format='matrix'):
         with open(path) as file:
             for line in file:
                 src, trg = line.strip().split()
-                gt[conversion_src(src)] = conversion_trg(trg)
+                if convert:
+                    gt[id2idx_src[conversion_src(src)]] = id2idx_trg[conversion_trg(trg)]
+                else:
+                    gt[conversion_src(src)] = conversion_trg(trg)
         return gt
 

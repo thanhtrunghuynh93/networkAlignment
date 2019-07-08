@@ -53,7 +53,7 @@ def shuffle(all_nodes, all_edges, args):
         permute_edges.append([node_dict[edge[0]], node_dict[edge[1]]])
 
     np.random.shuffle(permute_edges)        
-    return permute_edges,   , node_rev_dict
+    return permute_edges, node_dict, node_rev_dict
 
 def save(permute_edges, node_dict, node_rev_dict, input_dir, out_dir):
 
