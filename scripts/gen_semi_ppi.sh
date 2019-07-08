@@ -20,3 +20,11 @@ python utils/split_dict.py \
 --out_dir ${DIR}/dictionaries/ \
 --split 0.2
 
+# Step4: create feature
+PS="data/ppi" 
+python -m utils.create_features \
+--input_data1 ${PS}/graphsage \
+--input_data2 ${PS}/REGAL-d05-seed1/graphsage \
+--feature_dim 300 \
+--ground_truth ${PS}/REGAL-d05-seed1/dictionaries/groundtruth
+
