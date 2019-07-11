@@ -8,7 +8,7 @@ python -m generate_dataset.fully_synthetic \
 
 # Step2: run semi-synthetic to create target noise graph
 python -m generate_dataset.semi_synthetic \
---input_path data/fully_synthetic/erdos-renyi-n10000-p5 \
+--input_path data/fully-synthetic/erdos-renyi-n10000-p5 \
 --d 0.05 
 
 # Step3: shuffle id and index of nodes in target graph

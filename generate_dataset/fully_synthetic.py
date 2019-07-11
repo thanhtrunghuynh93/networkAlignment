@@ -11,8 +11,8 @@ def parse_args():
     return parser.parse_args()
 
 
-def gen_fully(full, n_nodes,n_edges):
-    name_p = str(p).replace("0.","")
+def gen_fully(full, n_nodes,n_edges, p):
+    name_p = str(int(p))
     outdir = full+"/erdos-renyi-n{}-p{}".format(n_nodes,name_p)
     FullySynthetic.generate_erdos_renyi_graph(outdir,n_nodes=n_nodes,n_edges=n_edges)
     return outdir
@@ -21,4 +21,4 @@ def gen_fully(full, n_nodes,n_edges):
 if __name__ == "__main__":
     args = parse_args()
     num_edges = args.aver * args.n / 2
-    out_dir = gen_fully(args.output_path, args.n, num_edges)
+    out_dir = gen_fully(args.output_path, args.n, num_edges, args.aver)
