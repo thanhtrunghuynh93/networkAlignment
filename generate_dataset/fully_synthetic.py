@@ -18,7 +18,15 @@ def gen_fully(full, n_nodes,n_edges, p):
     return outdir
 
 
+def gen_fully_smallworld(full, n_nodes, p):
+    name_p = str(int(p))
+    outdir = full+"/small_world-n{}-p{}".format(n_nodes,name_p)
+    FullySynthetic.generate_small_world_graph(outdir, n_nodes, int(p), 0.35)
+    return outdir
+
+
 if __name__ == "__main__":
     args = parse_args()
     num_edges = args.aver * args.n / 2
-    out_dir = gen_fully(args.output_path, args.n, num_edges, args.aver)
+    # out_dir = gen_fully(args.output_path, args.n, num_edges, args.aver)
+    gen_fully_smallworld(args.output_path, args.n, args.aver)
