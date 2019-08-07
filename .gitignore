@@ -16,7 +16,6 @@ tests/test_fullysynthetic.py
 tests/test_semisynthetic.py
 algorithms/FAN/
 newal.py
-algorithms/__init__.py
 log/
 *.npy
 tools/
@@ -26,3 +25,4 @@ algorithms/PALE/embeddings/
 algorithms/FAN2/tempdict/
 algorithms/RAN/embeddings/
 algorithms/RAN/tempdict/
+data/
