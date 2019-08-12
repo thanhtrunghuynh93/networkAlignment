@@ -13,9 +13,9 @@ import pdb
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Network alignment")
-    parser.add_argument('--source_dataset', default="data/douban/online/graphsage/")
-    parser.add_argument('--target_dataset', default="data/douban/offline/graphsage/")
-    parser.add_argument('--groundtruth',    default="data/douban/dictionaries/groundtruth")
+    parser.add_argument('--source_dataset', default="dataspace/douban/online/graphsage/")
+    parser.add_argument('--target_dataset', default="dataspace/douban/offline/graphsage/")
+    parser.add_argument('--groundtruth',    default="dataspace/douban/dictionaries/groundtruth")
     parser.add_argument('--alignment_matrix_name', default=None, help="Prefered name of alignment matrix.")
     parser.add_argument('--seed',           default=123,    type=int)
 
@@ -75,7 +75,7 @@ def parse_args():
     parser_PALE.add_argument('--mapping_epochs',      default=100,         type=int)
     parser_PALE.add_argument('--mapping_model',       default='linear')
     parser_PALE.add_argument('--activate_function',   default='sigmoid')
-    parser_PALE.add_argument('--train_dict',          default='data/douban/dictionaries/node,split=0.2.train.dict')
+    parser_PALE.add_argument('--train_dict',          default='dataspace/douban/dictionaries/node,split=0.2.train.dict')
     parser_PALE.add_argument('--embedding_name',          default='')
 
 
@@ -91,7 +91,7 @@ def parse_args():
     parser_DeepLink.add_argument('--unsupervised_epochs', default=500, type=int)
     parser_DeepLink.add_argument('--supervised_epochs',   default=2000,         type=int)
 
-    parser_DeepLink.add_argument('--train_dict',          default="data/dictionaries/node,split=0.2.train.dict")
+    parser_DeepLink.add_argument('--train_dict',          default="dataspace/dictionaries/node,split=0.2.train.dict")
     parser_DeepLink.add_argument('--hidden_dim1',         default=1200, type=int)
     parser_DeepLink.add_argument('--hidden_dim2',         default=1600, type=int)
 

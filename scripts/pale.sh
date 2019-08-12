@@ -1,4 +1,4 @@
-PD=data/douban
+PD=dataspace/douban
 PREFIX1=online
 PREFIX2=offline
 TRAINRATIO=0.2
