@@ -12,7 +12,6 @@ tests/final_mat.py
 tests/h.py
 tests/test_all.py
 tests/test_datapreprocess.py
-data/
 tests/test_fullysynthetic.py
 tests/test_semisynthetic.py
 algorithms/FAN/
