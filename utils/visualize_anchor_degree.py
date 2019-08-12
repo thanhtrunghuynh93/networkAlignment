@@ -18,9 +18,9 @@ def parse_args():
     parser.add_argument('--target_dataset', default="data/flickr_lastfm/lastfm/graphsage/")
     parser.add_argument('--groundtruth',    default="data/flickr_lastfm/dictionaries/groundtruth")
 
-    parser.add_argument('--source_dataset2', default="data/ppi/graphsage/")
-    parser.add_argument('--target_dataset2', default="data/ppi/REGAL-d2-seed1/graphsage/")
-    parser.add_argument('--groundtruth2',    default="data/ppi/REGAL-d2-seed1/dictionaries/groundtruth")
+    # parser.add_argument('--source_dataset2', default="data/ppi/graphsage/")
+    # parser.add_argument('--target_dataset2', default="data/ppi/REGAL-d2-seed1/graphsage/")
+    # parser.add_argument('--groundtruth2',    default="data/ppi/REGAL-d2-seed1/dictionaries/groundtruth")
 
     return parser.parse_args()
 
@@ -103,23 +103,23 @@ if __name__ == "__main__":
     data_matrix = np.array([source_degree, target_degree])
     models = ["source graph", "target graph"]
     line_chart(models, data_matrix, "Anchor pairs", "Degree", name="degree_flickr.png")
-    exit()
-    source_dataset = Dataset(args.source_dataset2)
-    target_dataset = Dataset(args.target_dataset2)
+    # exit()
+    # source_dataset = Dataset(args.source_dataset2)
+    # target_dataset = Dataset(args.target_dataset2)
 
-    source_id2idx = source_dataset.id2idx
-    target_id2idx = target_dataset.id2idx
-    source_idx2id = {v:k for k, v in source_id2idx.items()}
-    target_idx2id = {v:k for k, v in target_id2idx.items()}
-    groundtruth = graph_utils.load_gt(args.groundtruth2, source_id2idx, target_id2idx, "dict", True)
+    # source_id2idx = source_dataset.id2idx
+    # target_id2idx = target_dataset.id2idx
+    # source_idx2id = {v:k for k, v in source_id2idx.items()}
+    # target_idx2id = {v:k for k, v in target_id2idx.items()}
+    # groundtruth = graph_utils.load_gt(args.groundtruth2, source_id2idx, target_id2idx, "dict", True)
 
-    distance2 = get_distance(source_dataset, target_dataset, groundtruth)
+    # distance2 = get_distance(source_dataset, target_dataset, groundtruth)
 
-    data_matrix = np.array([distance1, distance2])
-    # print(np.max(source_degree), np.min(source_degree))
-    models = ["real_data", "synthetic_data"]
-    # data_matrix = np.array([source_degree - target_degree])
+    # data_matrix = np.array([distance1, distance2])
+    # # print(np.max(source_degree), np.min(source_degree))
+    # models = ["real_data", "synthetic_data"]
+    # # data_matrix = np.array([source_degree - target_degree])
     
-    # print(data_matrix)
-    line_chart(models, data_matrix, "Anchor pairs", "Degree")
+    # # print(data_matrix)
+    # line_chart(models, data_matrix, "Anchor pairs", "Degree")
 

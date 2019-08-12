@@ -6,5 +6,5 @@ from algorithms.IsoRank import IsoRank
 from algorithms.REGAL import REGAL
 from algorithms.PALE import PALE
 
-__all__ = ['BigAlign', 'DeepLink', 'FINAL', 'IONE', 'IsoRank', 'NAWAL', 'REGAL', 'FAGCN', 'PALE']
+__all__ = ['BigAlign', 'DeepLink', 'FINAL', 'IONE', 'IsoRank', 'REGAL', 'FAGCN', 'PALE']
 

@@ -1,7 +1,7 @@
 # this is script used to generate fully-synthetic dataset
-for NN in 1000 2000 3000 4000 5000 6000 7000 8000 9000
+for NN in 1000 
 do 
-for aver in 5 10 15 20 25 30 50
+for aver in 5 
 do 
     # Step1: generate a graph
     python -m generate_dataset.fully_synthetic \
