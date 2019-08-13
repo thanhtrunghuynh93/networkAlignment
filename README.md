@@ -14,6 +14,8 @@ python 3
 
 #### example scripts to generate dataset
 
+Extract file dataspace.zip before running scripts
+
 `scripts/gen_semi_ppi.sh`
 
 `scripts/gen_fully.sh`
