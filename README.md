@@ -6,8 +6,6 @@
 
 pytorch >0.2 is required (0.4 is recommended).
 
-tensorflow 1.8.0
-
 networkx 1.11
 
 python 3
