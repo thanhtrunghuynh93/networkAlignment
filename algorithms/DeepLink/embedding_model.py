@@ -40,6 +40,8 @@ class DeepWalk:
 
     def get_embedding(self):
         walks = self.run_random_walks()
+        import pdb
+        pdb.set_trace()
         embedding_model = Word2Vec(walks, size=self.embedding_dim, window=self.window_size,\
                             min_count=0, sg=1, hs=1, workers=self.num_cores, iter=self.num_epochs, seed=self.seed)
         embedding = np.zeros((len(self.G.nodes()), self.embedding_dim))
