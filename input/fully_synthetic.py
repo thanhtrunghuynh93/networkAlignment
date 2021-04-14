@@ -58,6 +58,8 @@ class FullySynthetic():
     @staticmethod
     def generate_small_world_graph(output_dir, n_nodes, k_neighbors, p_edge_modify, seed=123, feature_dim=None):
         graph = nx.connected_watts_strogatz_graph(n=n_nodes, k=k_neighbors, p=p_edge_modify, seed=seed)
+        mapping = {node: str(node) for node in graph.nodes()}
+        graph = nx.relabel_nodes(graph, mapping)
         features = None
         if feature_dim is not None:
             assert type(feature_dim) == int, "feature_dim must be None or int type"
